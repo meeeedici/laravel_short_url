@@ -32,11 +32,12 @@ Route::get('/finish', [UserController::class,'store']);
 
 Route::get('/login', [AuthController::class, 'LoginForm']);
 
-Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::post('/main', [AuthController::class, 'login']);
 
 Route::get('/main', [LinkController::class, 'index']);
+Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::get('/shorten', [LinkController::class, 'get_url']);
 

@@ -77,7 +77,7 @@ class LinkController extends Controller
     public function show($id)
     {
         $link = Link::find($id);
-        return view('complete', ['link' => $link[$id]]);
+        return view('complete', ['link' => $link]);
 
     }
 

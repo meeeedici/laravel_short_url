@@ -29,7 +29,7 @@
     </p>
     {{-- <form action="/shorten" method="get"> --}}
     <label>
-        <input type="url" name="url" value="" >
+        <input type="url" name="url" value="{{ $link->short }}" >
     </label>
         <div class="button"><button type="submit">戻る</button></div>
 

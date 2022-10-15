@@ -10,7 +10,7 @@
 <body>
 
     ログイン中のユーザー: <span>{{ $user->email }}</span>
-    ko
+
 
 
 
@@ -26,7 +26,11 @@
 
     </form>
 </div>
+<form action="/logout" method="post">
+    @csrf
+    <button type="submit">ログアウト</button>
 
+</form>
 
 </body>
 </html>
