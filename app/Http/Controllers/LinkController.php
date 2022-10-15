@@ -42,7 +42,7 @@ class LinkController extends Controller
      */
     public function get_url(Request $request)
     {
-
+        $id = $request->id;
         $url =  $request->url;
         $short = Str::random(5);
         // return 'https:://' .$short;
@@ -53,10 +53,15 @@ class LinkController extends Controller
 
         $link->save();
 
-        return to_route('complete');
+        return to_route('complete', ['id' => $id]);
 
 
     }
+
+    // public function profile($id)
+    // {
+    //     return 'id' . $id;
+    // }
 
     // public function complete()
     // {
@@ -69,11 +74,11 @@ class LinkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $links = Link::all();
-        return view('complete', ['links' => $links
-    ]);
+        $link = Link::find($id);
+        return view('complete', ['link' => $link[$id]]);
+
     }
 
     /**

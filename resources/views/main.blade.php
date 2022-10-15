@@ -9,7 +9,8 @@
 </head>
 <body>
 
-{{-- ログイン中のユーザー: <span>{{ $user->email }}</span> --}}
+    ログイン中のユーザー: <span>{{ $user->email }}</span>
+    ko
 
 
 

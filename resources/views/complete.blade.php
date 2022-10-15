@@ -9,7 +9,7 @@
 </head>
 <body>
 
-{{-- ログイン中のユーザー: <span>{{ $user->email }}</span> --}}
+
 
 
 
@@ -18,9 +18,10 @@
     <h2>発行完了 </h2>
     <p style="text-align: left">URL</p>
     <p>
-        @foreach ($links as $link)
-        <p>{{ $link->short }}</p>
-        @endforeach
+
+       <p>{{ $link->short }}</p>
+
+
         {{-- <a href="{{ $link->url }}">{{ $link->short }}</a> --}}
         {{-- $short = {{ $link->short }}; --}}
 

@@ -40,4 +40,7 @@ Route::get('/main', [LinkController::class, 'index']);
 
 Route::get('/shorten', [LinkController::class, 'get_url']);
 
-Route::get('/complete', [LinkController::class, 'show'])->name('complete');
+// Route::get('/complete', [LinkController::class, 'profile']);
+
+
+Route::get('/complete{id}', [LinkController::class, 'show'])->name('complete');
