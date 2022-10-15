@@ -40,4 +40,4 @@ Route::get('/main', [LinkController::class, 'index']);
 
 Route::get('/shorten', [LinkController::class, 'get_url']);
 
-Route::get('/complete', [LinkController::class, 'show']);
+Route::get('/complete', [LinkController::class, 'show'])->name('complete');
