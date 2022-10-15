@@ -1,0 +1,17 @@
+.container{
+
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+
+
+}
+
+input {
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.button {
+    text-align: right;
+}
