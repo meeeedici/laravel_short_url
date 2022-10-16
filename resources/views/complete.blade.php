@@ -19,7 +19,7 @@
     <p style="text-align: left">URL</p>
     <p>
 
-       <p>{{ $link->short }}</p>
+       {{-- <p>{{ $link->short }}</p> --}}
 
 
         {{-- <a href="{{ $link->url }}">{{ $link->short }}</a> --}}
@@ -29,9 +29,9 @@
     </p>
     {{-- <form action="/shorten" method="get"> --}}
     <label>
-        <input type="url" name="url" value="{{ $link->short }}" >
+        <input type="url" name="url" value="http:://localhost/{{ $link->short }}" >
     </label>
-        <div class="button"><button type="submit">戻る</button></div>
+        <div class="button"><button type="button" onClick="history.back()">戻る</button></div>
 
     {{-- </form> --}}
 </div>

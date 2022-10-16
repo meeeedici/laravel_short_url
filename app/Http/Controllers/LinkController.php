@@ -53,7 +53,7 @@ class LinkController extends Controller
 
         $link->save();
 
-        return to_route('complete', ['id' => $id]);
+        return to_route('complete', $link->id);
 
 
     }
